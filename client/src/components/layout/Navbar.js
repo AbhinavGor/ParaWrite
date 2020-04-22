@@ -34,7 +34,7 @@ const Navbar = ({auth:{ isAuthenticated, loading}, logout}) => {
       <nav className='navbar bg-dark'>
         <h1>
           <Link to='/'>
-            <i className='fas fa-code' />ParaWrite
+            <i className='fas fa-feather-alt' />ParaWrite
           </Link> 
         </h1>
         {!loading && (<Fragment>{ isAuthenticated ? authLinks : guestLinks}</Fragment>)}
