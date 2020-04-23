@@ -333,7 +333,7 @@ button {
 /* Landing Page */
 .landing {
   position: relative;
-  /*background: url('https://images.unsplash.com/photo-1461360276940-6603a02afc1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1080&q=60') no-repeat center center/cover;*/
+  background: url('https://images.unsplash.com/photo-1461360276940-6603a02afc1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1080&q=60') no-repeat center center/cover;
   height: 100vh;
 }
 

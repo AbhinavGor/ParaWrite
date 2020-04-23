@@ -6,10 +6,9 @@ const jwt = require('jsonwebtoken');
 const config = require('config');
 const {check, validationResult} = require('express-validator');
 
-const User = require('../../models/User');
-const Admin = require('../../models/Admin');
-//@route  POST api/users
-//@desc   Register User
+const Admin = require('../../models/Admin')
+//@route  POST api/admins
+//@desc   Register admin
 //@access Public
 router.post('/',[
     check('name', 'Name is required').not().isEmpty(),
@@ -23,40 +22,42 @@ async (req, res) => {
     }
 
     const {name, email, password} = req.body;
+    const member = true;
 
     try {
-            //See if the user exists
-            let user = await User.findOne({email});
+            //See if the admin exists
+            let admin = await Admin.findOne({email});
 
-            if(user){
-                return res.status(400).json({ errors: [{ msg: 'User already exists.'}]});
+            if(admin){
+                return res.status(400).json({ errors: [{ msg: 'admin already exists.'}]});
             }
 
-            //Get users gravatar
+            //Get admins gravatar
             const avatar = gravatar.url(email, {
                 s: '200',
                 r: 'pg',
                 d: 'mm'
             })
 
-            user = new User({
+            admin = new Admin({
                 name, 
                 email,
                 avatar, 
                 password,
+                member
             });
 
             //Encrypt password
             const salt = await bcrypt.genSalt(10);
 
-            user.password = await bcrypt.hash(password, salt);
+            admin.password = await bcrypt.hash(password, salt);
 
-            await user.save();
+            await admin.save();
 
             //Return jsonwebtoken
             const payload = {
-                user: {
-                    id: user.id
+                admin: {
+                    id: admin.id
                 }
             }
 
