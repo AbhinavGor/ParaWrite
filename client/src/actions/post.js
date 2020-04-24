@@ -100,7 +100,7 @@ export const addPost = formData => async dispatch => {
     dispatch(setAlert('Post Created', 'success'));
   } catch (err) {
     dispatch(
-      setAlert('Delete existing post.', 'danger'),
+      setAlert('Only one submission allowed.', 'danger'),
       {
       type: POST_ERROR,
       payload: { msg: err.response.statusText, status: err.response.status }
