@@ -6,6 +6,7 @@ import Landing from './components/layout/Landing';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import Admin from './components/auth/Admin';
+import AdminLogin from './components/auth/AdminLogin';
 import Alert from './components/layout/Alert';
 import Dashboard from './components/dashboard/Dashboard';
 import PrivateRoute from './components/routing/PrivateRoute';
@@ -38,6 +39,7 @@ const App = () => {
         <Switch>
           <Route exact path="/register" component={Register} />
           <Route exact path="/admin" component={Admin} />
+          <Route exact path="/adminlogin" component={AdminLogin} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/registered" component={Registered} />
           <PrivateRoute exact path="/posts" component={Posts} />
