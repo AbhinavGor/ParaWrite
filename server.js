@@ -16,7 +16,7 @@ app.use('/api/auth', require('./routes/api/auth'));
 app.use('/api/profile', require('./routes/api/profile'));
 app.use('/api/posts', require('./routes/api/posts'));
 app.use('/api/admin', require('./routes/api/admin'));
-app.use('/api/adminlogin', require('./routes/api/adminlogin'));
+app.use('/api/adminlogin', require('./routes/api/admin'));
 
 //Serve static assets in production
 if(process.env.NODE_ENV === 'production'){

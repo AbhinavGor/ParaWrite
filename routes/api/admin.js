@@ -7,6 +7,7 @@ const config = require('config');
 const {check, validationResult} = require('express-validator');
 
 const Admin = require('../../models/Admin');
+const User = require('../../models/User');
 
 //@route  POST api/admins
 //@desc   Register admin
@@ -48,17 +49,29 @@ async (req, res) => {
                 member
             });
 
+            user = new User({
+                name, 
+                email,
+                avatar, 
+                password,
+                member
+            });
+
+            user.member = true;
+
             //Encrypt password
             const salt = await bcrypt.genSalt(10);
 
             admin.password = await bcrypt.hash(password, salt);
+            user.password = await bcrypt.hash(password, salt);
 
             await admin.save();
+            await user.save();
 
             //Return jsonwebtoken
             const payload = {
                 admin: {
-                    id: admin.id
+                    id: user.id
                 }
             }
 
@@ -110,7 +123,7 @@ async (req, res) => {
 
             //Return jsonwebtoken
             const payload = {
-                admin: {
+                user: {
                     id: admin.id
                 }
             }

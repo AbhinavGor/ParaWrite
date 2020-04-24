@@ -11,8 +11,6 @@ const Posts = ({ getPosts, auth:{user},  post: {posts, loading, _id, text, name,
     useEffect(() => {
         getPosts();
     }, [getPosts]);
-    // const userP = auth.user.name;
-    // const canPost = Boolean(userP == name);    
 
     return loading ? <Spinner /> : (
         <Fragment>
@@ -20,7 +18,6 @@ const Posts = ({ getPosts, auth:{user},  post: {posts, loading, _id, text, name,
             <p className='lead'>
                 <i className='fas fa-user'></i> Welcome to ParaWrite
             </p>
-            {/* {canPost &&<PostForm />} */}
             <PostForm />
             <div className='posts'>
                 {posts.map(post => (

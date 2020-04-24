@@ -26,7 +26,8 @@ const Admin = ({setAlert, registerAdmin, isAuthenticated}) => {
     };
 
     if(isAuthenticated){
-      return <Redirect to='/dashboard' />
+      setAlert('Registration Successful', 'success');
+      return <Redirect to='/login' />
     }
     return <Fragment>
       <h1 className="large text-primary">Admin Sign Up</h1>

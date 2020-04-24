@@ -27,7 +27,7 @@ const UserSchema = new mongoose.Schema({
     },
     hasposted: {
         type: Boolean,
-    }
+    },
 });
 
 module.exports = User = mongoose.model('user', UserSchema);
