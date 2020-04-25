@@ -29,16 +29,16 @@ const PostItem = ( {addLike, removeLike, deletePost, auth, post:  {_id, text, na
                 
                   {showActions && <Fragment>
                     <span>
-                    {true && (<button onClick = {e => addLike(_id)} type="button" class="btn btn-light">
+                    {auth.user.member && (<button onClick = {e => addLike(_id)} type="button" class="btn btn-light">
               <i class="fas fa-thumbs-up"></i>
               <span>{likes.length > 0 && (
                   <span > {likes.length}</span>
               )}</span>
             </button>)}</span>
-            <span>{true && (<button onClick = {e => removeLike(_id)} type="button" class="btn btn-light">
+            <span>{auth.user.member && (<button onClick = {e => removeLike(_id)} type="button" class="btn btn-light">
               <i class="fas fa-thumbs-down"></i>
               <span>{likes.length > 0 && (
-                  <span > {likes.length}</span>
+                  <span > </span>
               )}</span>
             </button>)}</span>
             

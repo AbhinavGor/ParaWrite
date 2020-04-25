@@ -10,18 +10,17 @@ export const Landing = ({ isAuthenticated }) => {
   }
     return (
         <section className="landing">
-      <div className="dark-overlay">
-        <div className="landing-inner">
+          <div className='landing-inner'>
           <h1 className="x-large">ParaWrite</h1>
+          <p className='lead2'>Choose a topic of your own and write a new article. The solution presented has to be thoroughly explained well-argued and justified. It has to make link to a bigger global picture. <br /><strong>May the force be with you.</strong></p>
           <p className="lead">
             Login/Register to participate
           </p>
           <div className="buttons">
-            <Link to="/register" className="btn btn-primary">Sign Up</Link>
-            <Link to="/login" className="btn btn-light">Login</Link>
+            <Link to="/register" className="signup">Sign Up</Link>
+            <Link to="/login" className="login">Login</Link>
+            </div>
           </div>
-        </div>
-      </div>
     </section>
     )
 };

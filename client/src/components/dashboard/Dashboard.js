@@ -13,17 +13,47 @@ const Dashboard = ({getCurrentProfile, auth:{user}, profile:{profile, loading}})
 
 
     return loading && profile === null ? <Spinner /> : <Fragment>
-        <h1 className='large text-primary'>Dashboard</h1>
-        <p className = 'lead'>
-            <i className= 'fas fa-user'></i> Welcome {user && user.name}
+        <p className = 'large'>
+            <i className= 'fas fa-user'></i> Welcome <strong>{user && user.name}</strong>
         </p>
         <Fragment>
-            <h1 className='large text-primary'>Judging Criteria</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis nunc in magna aliquam viverra sollicitudin viverra felis. Nam iaculis, nibh iaculis imperdiet ornare, erat est vehicula mauris, eu auctor urna sapien in tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum convallis laoreet nunc, sed lobortis purus egestas a. Duis finibus nunc et mauris eleifend, eu cursus libero finibus. Donec mollis neque sit amet tortor pellentesque, vitae vulputate ante rutrum. Proin at eros congue, egestas ligula ut, volutpat enim. In odio augue, vulputate sit amet augue in, auctor lobortis nisi.
-
-Pellentesque posuere malesuada lorem. Proin porta lectus sed pharetra fringilla. Nam quis ullamcorper urna, sit amet commodo nibh. Phasellus ac dictum eros. In hac habitasse platea dictumst. Vestibulum laoreet metus lacus, ut porttitor sapien dapibus et. Fusce euismod mi et lacus ultricies, nec malesuada libero ultricies.
-
-In diam sapien, mattis at rhoncus id, sodales quis erat. Mauris tempor quam id tortor volutpat vestibulum. Vivamus nec lacinia elit, gravida porta ipsum. Sed et pharetra tortor, nec eleifend libero. Nam rhoncus malesuada nibh vitae iaculis. Aliquam non nulla non ante viverra tincidunt. Phasellus hendrerit, lectus vel posuere feugiat, diam ante congue enim, eu pharetra nulla sapien nec arcu. Cras dignissim a ex et lacinia. Vestibulum et varius ipsum. Phasellus id ante id nibh eleifend finibus nec sed risus. Fusce elementum orci sit amet tempus accumsan. Sed tincidunt purus eget interdum sollicitudin. Maecenas quis dui gravida, mollis sapien vitae, auctor mauris. Mauris varius nibh aliquam urna pharetra, nec efficitur sapien faucibus.</p>
+            <h1 className='large text-primary'>Rules and Conditions</h1>
+            <div className='indent1'>
+                <ol>
+                    <li>Choose a topic of your own and write a news article.</li>
+                    <li>The article should not be longer than 300 words.</li>
+                    <li>Only <strong>one submission</strong> is allowed.</li>
+                </ol>
+            </div>
+            <h1 className='large text-primary'>Evaluation Criteria</h1>
+            <div className='indent1'>
+                <h3>Composition</h3>
+                <div className='indent2'>
+                    <ol>
+                        <li>The submission has to be well-structured and has to cover who, what, where, why, when and how.</li>
+                        <li>The article has to have a beginning, middle and end.</li>
+                    </ol>
+                </div>
+            </div>
+            <div className='indent1'>
+                <h3>Fair, balanced and objective reporting</h3>
+                <div className='indent2'>
+                    <ol>
+                        <li>The submission has to be balanced and fair in terms of representing different sides of an argument prior to offering a suggestion of potentiall solutions.</li>
+                        <li>The quotes used have to be from real, credible sources.</li>
+                        <li>Scientific and statistical reporting must be accurate and should be supported by sources/footnotes.</li>
+                    </ol>
+                </div>
+            </div>
+            <div className='indent1'>
+                <h3>Others</h3>
+                <div className='indent2'>
+                    <ol>
+                        <li>The submission should cover relevant historical, economic, social and/or political implications and possible consequences.</li>
+                        <li>Solution presented has to be thoroughly explained, well argued and justified.</li>
+                    </ol>
+                </div>
+            </div>
         </Fragment>
     </Fragment>
 };

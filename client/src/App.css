@@ -1,11 +1,13 @@
 /* Global Styles */
 :root {
-  --primary-color: #17a2b8;
+  --primary-color: #4c4c4c;
   --dark-color: #343a40;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
   --success-color: #28a745;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
   box-sizing: border-box;
@@ -14,7 +16,7 @@
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   background-color: #fff;
@@ -48,7 +50,6 @@ img {
 .x-large {
   font-size: 4rem;
   line-height: 1.2;
-  margin-bottom: 1rem;
 }
 
 .large {
@@ -67,7 +68,7 @@ img {
 }
 
 .text-primary {
-  color: var(--primary-color);
+  color: #2c2c2c;
 }
 
 .text-dark {
@@ -126,6 +127,46 @@ img {
   margin: 3rem 0;
 }
 
+.signup{
+  display: inline-block;
+  background: #2c2c2c;
+  color: #fff;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px ;
+  margin-right: 0.5rem;
+  outline: none;
+}
+
+
+.login{
+  display: inline-block;
+  background: #fff;
+  color: #4c4c4c;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  border: 1px solid #2c2c2c;
+  border-radius: 10px ;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  outline: none;
+}
+
+.login:hover{
+  display: inline-block;
+  background: #fff;
+  color: #4c4c4c;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  border: 1px solid #4c4c4c;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+
 .btn {
   display: inline-block;
   background: var(--light-color);
@@ -176,8 +217,8 @@ img {
 .bg-dark,
 .badge-dark,
 .alert-dark {
-  background: var(--dark-color);
-  color: #fff;
+  background: #2c2c2c;
+  color: #000;
 }
 
 .btn-danger,
@@ -308,7 +349,6 @@ button {
   z-index: 1;
   width: 100%;
   top: 0;
-  border-bottom: solid 1px var(--primary-color);
   opacity: 0.9;
 }
 
@@ -317,7 +357,6 @@ button {
 }
 
 .navbar a {
-  color: #fff;
   padding: 0.45rem;
   margin: 0 0.25rem;
 }
@@ -333,21 +372,13 @@ button {
 /* Landing Page */
 .landing {
   position: relative;
-  background: url('https://images.unsplash.com/photo-1461360276940-6603a02afc1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1080&q=60') no-repeat center center/cover;
   height: 100vh;
+  overflow-y: hidden;
+  
 }
 
-.landing-inner {
-  color: #fff;
-  height: 100%;
-  width: 80%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
+
+
 
 /* Profiles Page */
 .profile {
@@ -509,25 +540,30 @@ button {
 
   .lead {
     font-size: 1rem;
+    margin: 1rem;
   }
 
   /* Navbar */
   .navbar {
     display: block;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
   }
 
   .navbar ul {
     text-align: center;
     justify-content: center;
+    font-family: 'Poppins', sans-serif;
   }
 
   .navbar h1 {
     margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
   }
 
   .navbar .welcome {
     display: none;
+    font-family: 'Poppins', sans-serif;
   }
 
   /* Profiles Page */
@@ -577,8 +613,8 @@ button {
 }
 /* Global Styles */
 :root {
-  --primary-color: #6685c2;
-  --dark-color: #00003b;
+  --primary-color: #45DEC3;
+  --dark-color: #4c4c4c;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
   --success-color: #28a745;
@@ -591,7 +627,7 @@ button {
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   background-color: #fff;
@@ -633,10 +669,12 @@ img {
   line-height: 1.2;
   margin-bottom: 1rem;
 }
-
+.lead2{
+  font-size: 1.25rem;
+}
 .lead {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin: 1rem;
 }
 
 .text-center {
@@ -647,8 +685,20 @@ img {
   color: var(--primary-color);
 }
 
+.text-primary-login {
+  color: #2c2c2c;
+}
+
 .text-dark {
   color: var(--dark-color);
+}
+.indent1{
+  margin-left: 50px;
+  font-size: 1.4em;
+}
+.indent2{
+  margin-left: 50px;
+  font-size: 1.2em;
 }
 
 .btn {
@@ -686,8 +736,8 @@ img {
 
 .btn-dark,
 .bg-dark {
-  background: var(--dark-color);
-  color: #fff;
+  background: #2c2c2c;
+  color: #000000;
 }
 
 .btn-danger,
@@ -736,7 +786,7 @@ img {
 
 /* Overlay */
 .dark-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.0);
   position: absolute;
   top: 0;
   left: 0;
@@ -777,6 +827,7 @@ button {
 .navbar {
   display: flex;
   justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
   align-items: center;
   padding: 0.7rem 2rem;
   position: fixed;
@@ -789,11 +840,13 @@ button {
 
 .navbar ul {
   display: flex;
+  font-family: 'Poppins', sans-serif;
 }
 
 .navbar a {
   color: #fff;
   padding: 0.45rem;
+  font-family: 'Poppins', sans-serif;
   margin: 0 0.25rem;
 }
 
@@ -803,20 +856,24 @@ button {
 
 .navbar .welcome span {
   margin-right: 0.6rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Landing Page */
 .landing {
+  color: black;
   position: relative;
-  background: url('https://images.unsplash.com/photo-1461360276940-6603a02afc1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1080&q=60') no-repeat center center/cover;
+  background: url('../../client/src/components/layout/bgn.png') no-repeat center center/cover;
   height: 100vh;
+  overflow: hidden;
 }
 
 .landing-inner {
-  color: #fff;
-  height: 100%;
-  width: 80%;
+  color: #000;
+  height: 80%;
+  width: 50%;
   margin: auto;
+  margin-bottom: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
