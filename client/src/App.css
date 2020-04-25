@@ -525,6 +525,13 @@ button {
     margin-top: 8rem;
   }
 
+  .lead2{
+    font-size: 12px !important;
+  }
+  .lead{
+    font-size: 14px !important;
+  }
+
   .hide-sm {
     display: none;
   }
