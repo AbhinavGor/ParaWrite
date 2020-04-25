@@ -7,7 +7,7 @@ import PostItem from './PostItem';
 import PostForm from './PostForm';
 
 
-const Posts = ({ getPosts, auth:{user},  post: {posts, loading, _id, text, name, avatar, likes, date}}) => {
+const Posts = ({ getPosts, auth,  post: {posts, loading, _id, text, name, avatar, likes, date}}) => {
     useEffect(() => {
         getPosts();
     }, [getPosts]);
@@ -19,11 +19,13 @@ const Posts = ({ getPosts, auth:{user},  post: {posts, loading, _id, text, name,
                 <i className='fas fa-user'></i> Welcome to ParaWrite
             </p>
             <PostForm />
-            <div className='posts'>
+            {auth.user.hasposted &&(
+                <div className='posts'>
                 {posts.map(post => (
                     <PostItem key = {post.id} post={post} />
                 ))}
             </div>
+            )}
         </Fragment>
     );
 };

@@ -339,6 +339,25 @@ button {
   background: var(--light-color);
 }
 
+/* .ff{
+  display: flex;
+  flex-direction: column-reverse;
+  align-content: flex-end;
+  height: 100%;
+} */
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  bottom: 0px;
+  width: 100%;
+  position: fixed;
+  font-size: 14px !important;
+  height: auto;
+  color: aliceblue;
+}
+
 /* Navbar */
 .navbar {
   display: flex;
@@ -521,6 +540,10 @@ button {
 
 /* Mobile Styles */
 @media (max-width: 700px) {
+
+  .footer{
+    font-size: 12px !important;
+  }
   .container {
     margin-top: 8rem;
   }
@@ -949,5 +972,34 @@ button {
   .post a,
   .post button {
     padding: 0.3rem 0.4rem;
+  }
+}
+
+.left{
+  font-size: 14px !important;
+  padding: 0px 0 8px 0;
+  color: aliceblue;
+  font-weight: 400;
+  margin: auto;
+  margin-left: 10px;
+}
+
+.right{
+  font-size: 14px !important;
+  align-self: right;
+  padding: 0px 0 8px 0px;
+  color: aliceblue;
+  font-weight: 400;
+  margin: auto;
+  margin-right: 10px;
+}
+
+@media (max-width: 700px) {
+  .left{
+    font-size: 10px !important;
+  }
+
+  .right{
+    font-size: 10px !important;
   }
 }

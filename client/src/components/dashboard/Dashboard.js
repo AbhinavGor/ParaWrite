@@ -21,7 +21,7 @@ const Dashboard = ({getCurrentProfile, auth:{user}, profile:{profile, loading}})
             <div className='indent1'>
                 <ol>
                     <li>Choose a topic of your own and write a news article.</li>
-                    <li>The article should not be longer than 300 words.</li>
+                    <li>The article should conatin a minimum of 200 words and a maximum of 820 words.</li>
                     <li>Only <strong>one submission</strong> is allowed.</li>
                 </ol>
             </div>

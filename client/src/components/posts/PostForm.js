@@ -10,6 +10,7 @@ const PostForm = ({ addPost }) => {
     <div className='post-form'>
       <div className='bg-primary p'>
         <h3>Submit your articles here</h3>
+        <small>Results will be announced on 7th May.</small>
       </div>
       <form
         className='form my-1'
