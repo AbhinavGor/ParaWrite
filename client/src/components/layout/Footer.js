@@ -16,7 +16,7 @@ const Footer = ({auth:{ isAuthenticated, loading}, logout}) => {
     <div className='ff'>
         <div></div>
       <div className='footer bg-dark'>
-        <h1 className='left'>&copy; The Hindu Education Plus Club 2014-2020. All Rights Reserved.</h1>
+        <h1 className='left'>&copy; The Hindu Education Plus Club 2012-2020. All Rights Reserved.</h1>
         <div className='right'>For any technical difficulties, contact : tech@thepcvit.com.</div>
       </div>
       </div>
