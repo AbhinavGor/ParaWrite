@@ -25,6 +25,7 @@ async (req, res) => {
 
     const {name, email, password} = req.body;
     const member = true;
+    const hasposted = true;
 
     try {
             //See if the admin exists
@@ -46,7 +47,8 @@ async (req, res) => {
                 email,
                 avatar, 
                 password,
-                member
+                member,
+                hasposted
             });
 
             user = new User({
@@ -54,7 +56,8 @@ async (req, res) => {
                 email,
                 avatar, 
                 password,
-                member
+                member,
+                hasposted
             });
 
             user.member = true;
@@ -66,6 +69,7 @@ async (req, res) => {
             user.password = await bcrypt.hash(password, salt);
 
             await admin.save();
+            user.hasposted = admin.hasposted;
             await user.save();
 
             //Return jsonwebtoken

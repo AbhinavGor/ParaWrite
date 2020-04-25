@@ -23,7 +23,7 @@ export const getPosts = () => async dispatch => {
   } catch (err) {
     dispatch({
       type: POST_ERROR,
-      payload: { msg: err.response.statusText, status: err.response.status }
+      payload: { msg: err.statusText, status: err.status }
     });
   }
 };
@@ -97,7 +97,7 @@ export const addPost = formData => async dispatch => {
       payload: res.data
     });
 
-    dispatch(setAlert('Post Created', 'success'));
+    dispatch(setAlert('Post Created. To view all posts you need to logout and login.', 'success'));
   } catch (err) {
     dispatch(
       setAlert('Only one submission allowed.', 'danger'),

@@ -27,7 +27,7 @@ const PostItem = ( {addLike, removeLike, deletePost, auth, post:  {_id, text, na
             <Fragment>
             
                 
-                  {showActions && <Fragment>
+                   <Fragment>
                     <span>
                     {auth.user.member && (<button onClick = {e => addLike(_id)} type="button" class="btn btn-light">
               <i class="fas fa-thumbs-up"></i>
@@ -50,7 +50,7 @@ const PostItem = ( {addLike, removeLike, deletePost, auth, post:  {_id, text, na
                       <i class="fas fa-times"></i>
                 </button>)}
                   </Fragment>
-                    }
+                    
                   
                 </Fragment>     
           </div>

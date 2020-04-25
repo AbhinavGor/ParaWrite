@@ -7,7 +7,7 @@ import PostItem from './PostItem';
 import PostForm from './PostForm';
 
 
-const Posts = ({ getPosts, auth,  post: {posts, loading, _id, text, name, avatar, likes, date}}) => {
+const Posts = ({ getPosts, auth,  user, post: {posts, loading, _id, text, name, avatar, likes, date}}) => {
     useEffect(() => {
         getPosts();
     }, [getPosts]);

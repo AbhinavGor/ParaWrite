@@ -24,6 +24,10 @@ const AdminSchema = new mongoose.Schema({
     date: {
         type: Date,
         default: Date.now
+    },
+    hasposted: {
+        type: Boolean,
+        default: true
     }
 });
 

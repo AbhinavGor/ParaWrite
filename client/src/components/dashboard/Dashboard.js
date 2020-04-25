@@ -21,7 +21,7 @@ const Dashboard = ({getCurrentProfile, auth:{user}, profile:{profile, loading}})
             <div className='indent1'>
                 <ol>
                     <li>Choose a topic of your own and write a news article.</li>
-                    <li>The article should conatin a minimum of 200 words and a maximum of 820 words.</li>
+                    <li>The article should contain a minimum of 200 words and a maximum of 820 words.</li>
                     <li>Only <strong>one submission</strong> is allowed.</li>
                 </ol>
             </div>
@@ -39,7 +39,7 @@ const Dashboard = ({getCurrentProfile, auth:{user}, profile:{profile, loading}})
                 <h3>Fair, balanced and objective reporting</h3>
                 <div className='indent2'>
                     <ol>
-                        <li>The submission has to be balanced and fair in terms of representing different sides of an argument prior to offering a suggestion of potentiall solutions.</li>
+                        <li>The submission has to be balanced and fair in terms of representing different sides of an argument prior to offering a suggestion of potential solutions.</li>
                         <li>The quotes used have to be from real, credible sources.</li>
                         <li>Scientific and statistical reporting must be accurate and should be supported by sources/footnotes.</li>
                     </ol>
