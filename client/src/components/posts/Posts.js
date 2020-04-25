@@ -18,7 +18,7 @@ const Posts = ({ getPosts, auth,  user, post: {posts, loading, _id, text, name, 
             <p className='lead'>
                 <i className='fas fa-user'></i> Welcome to ParaWrite
             </p>
-            <PostForm />
+            {/* <PostForm /> */}
             {auth.user.hasposted &&(
                 <div className='posts'>
                 {posts.map(post => (

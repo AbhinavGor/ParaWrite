@@ -26,7 +26,7 @@ const Register = ({setAlert, register, isAuthenticated}) => {
     };
 
     if(isAuthenticated){
-      setAlert('Registration Successful', 'success');
+      setAlert('Registration Successful you can submit articles from 27th April.', 'success');
       return <Redirect to='/login' />
     }
     return <Fragment>
