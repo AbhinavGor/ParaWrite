@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { addLike, removeLike, deletePost} from '../../actions/post';
 
 const PostItem = ( {addLike, removeLike, deletePost, auth, post:  {_id, text, name, avatar, user, likes, date}, showActions}) => 
+        
         <div class="post bg-white p-1 my-1">
           <div>
               <img
@@ -25,13 +26,16 @@ const PostItem = ( {addLike, removeLike, deletePost, auth, post:  {_id, text, na
             
             <Fragment>
             
-                <span>{auth.user.member && (<button onClick = {e => addLike(_id)} type="button" class="btn btn-light">
+                
+                  {showActions && <Fragment>
+                    <span>
+                    {true && (<button onClick = {e => addLike(_id)} type="button" class="btn btn-light">
               <i class="fas fa-thumbs-up"></i>
               <span>{likes.length > 0 && (
                   <span > {likes.length}</span>
               )}</span>
             </button>)}</span>
-            <span>{auth.user.member && (<button onClick = {e => removeLike(_id)} type="button" class="btn btn-light">
+            <span>{true && (<button onClick = {e => removeLike(_id)} type="button" class="btn btn-light">
               <i class="fas fa-thumbs-down"></i>
               <span>{likes.length > 0 && (
                   <span > {likes.length}</span>
@@ -45,6 +49,9 @@ const PostItem = ( {addLike, removeLike, deletePost, auth, post:  {_id, text, na
                 <button onClick = { e => deletePost(_id)} type="button" class="btn btn-danger">
                       <i class="fas fa-times"></i>
                 </button>)}
+                  </Fragment>
+                    }
+                  
                 </Fragment>     
           </div>
         </div>
