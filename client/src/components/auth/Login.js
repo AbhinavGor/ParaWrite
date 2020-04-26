@@ -44,7 +44,7 @@ const Login = ({ login, isAuthenticated }) => {
         <input type="submit" className="signup" value="Login" />
       </form>
       <p className="my-1">
-        Don't have an account? <Link to="/resgister">Register</Link>
+        Don't have an account? <Link to="/register">Register</Link>
       </p>
     </Fragment>
 }
