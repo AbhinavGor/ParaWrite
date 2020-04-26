@@ -296,7 +296,7 @@ img {
   width: 100%;
   padding: 0.4rem;
   font-size: 1.2rem;
-  border: 1px solid #ccc;
+  
 }
 
 .form input[type='submit'],
@@ -763,6 +763,7 @@ img {
 .bg-primary {
   background: var(--primary-color);
   color: #fff;
+  border-radius: 16px;
 }
 
 .btn-light,
@@ -855,8 +856,26 @@ img {
   padding: 0.4rem;
   font-size: 1.2rem;
   border: 1px solid #ccc;
+  font-family: 'Poppins', sans-serif;
 }
 
+.form input[type='text'],
+.form input[type='email'],
+.form input[type='password'],
+.form input[type='date']{
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form input[type='text'],
+.form input[type='email'],
+.form input[type='password'],
+.form input[type='date']{
+  outline-width: 1px;
+  outline-color: #45DEC3;
+}
 .form input[type='submit'],
 button {
   font: inherit;
@@ -1014,6 +1033,14 @@ button {
 }
 
 @media (max-height: 700px){
+  .form input[type='text'],
+.form input[type='email'],
+.form input[type='password'],
+.form input[type='date'],
+.form select,
+.form textarea {
+  font-size: 0.9em;
+}
   .lead{
     font-size: 12px !important ;
   }

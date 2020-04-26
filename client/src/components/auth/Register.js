@@ -34,13 +34,14 @@ const Register = ({setAlert, register, isAuthenticated}) => {
       <p className="lead"><i className="fas fa-user"></i> Create Your Account</p>
       <form className="form" onSubmit = {e => onSubmit(e)}>
         <div className="form-group">
-          <input type="text" placeholder="Name" name="name" value = {name} onChange={e => onChange(e)} />
+          <input className="text-box" type="text" placeholder="Name" name="name" value = {name} onChange={e => onChange(e)} />
         </div>
         <div className="form-group">
-          <input type="email" placeholder="Email Address" name="email" value = {email} onChange={e => onChange(e)}/>     
+          <input className="text-box" type="email" placeholder="Email Address" name="email" value = {email} onChange={e => onChange(e)}/>     
         </div>
         <div className="form-group">
           <input
+            className="text-box"
             type="password"
             placeholder="Password"
             name="password"
@@ -51,13 +52,14 @@ const Register = ({setAlert, register, isAuthenticated}) => {
         </div>
         <div className="form-group">
           <input
+            className="text-box effect-2"
             type="password"
             placeholder="Confirm Password"
             name='password2'
             value = {password2}
             onChange={e => onChange(e)}
             
-          />
+          /><span class="focus-border"></span>
         </div>
         <input type="submit" className="signup" value="Register" />
       </form>
