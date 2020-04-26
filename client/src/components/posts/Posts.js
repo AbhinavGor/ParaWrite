@@ -23,7 +23,7 @@ const Posts = ({ getPosts, auth,  user, post: {posts, loading, _id, text, name, 
                 <small>Articles can be submitted from 27th April to 3rd May.</small><br />
                 <small>Results will be announced on 7th May.</small>
             </div>
-            <PostForm />
+            {/* <PostForm /> */}
             {auth.user.hasposted &&(
                 <div className='posts'>
                 {posts.map(post => (
