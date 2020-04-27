@@ -100,7 +100,7 @@ export const addPost = formData => async dispatch => {
     dispatch(setAlert('Post Created. To view all posts you need to logout and login.', 'success'));
   } catch (err) {
     dispatch(
-      setAlert('Only one submission allowed.', 'danger'),
+      setAlert('Only one submission allowed. If there are no existing submissions check wordlimit before submisssion.', 'danger'),
       {
       type: POST_ERROR,
       payload: { msg: err.response.statusText, status: err.response.status }

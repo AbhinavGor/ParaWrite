@@ -763,7 +763,6 @@ img {
 .bg-primary {
   background: var(--primary-color);
   color: #fff;
-  border-radius: 16px;
 }
 
 .btn-light,
