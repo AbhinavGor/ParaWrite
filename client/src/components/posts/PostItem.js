@@ -18,7 +18,7 @@ const PostItem = ( {addLike, removeLike, deletePost, auth, post:  {_id, text, na
           </div>
           <div>
             <p class="my-1">
-              {text}
+              {text.slice(0,800)} . . . . . . . . . .
             </p>
              <p class="post-date">
                 Posted on <Moment format='DD/MM/YYYY'>{date}</Moment>

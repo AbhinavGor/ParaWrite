@@ -5,6 +5,7 @@ import { getPosts } from '../../actions/post';
 import Spinner from '../layout/Spinner';
 import PostItem from './PostItem';
 import PostForm from './PostForm';
+import Pagination from 'react-js-pagination';
 
 
 const Posts = ({ getPosts, auth,  user, post: {posts, loading, _id, text, name, avatar, likes, date}}) => {

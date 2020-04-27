@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Spinner from "../layout/Spinner";
-import Postitem from "../posts/PostItem";
+import Moment from 'react-moment';
 import { getPost } from "../../actions/post";
 
 const Post = ({ getPost, post: {post, loading}, match }) => {
@@ -16,8 +16,27 @@ const Post = ({ getPost, post: {post, loading}, match }) => {
         <Link to='/posts' className = 'btn'>
             Back to Posts
         </Link>
-        <Postitem post={post} showActions = {false} />
-    </Fragment>)
+        <div class="post bg-white p-1 my-1">
+          <div>
+              <img
+                class="round-img"
+                src={post.avatar}
+                alt=""
+              />
+              <h4>{post.name}</h4>
+          </div>
+          <div>
+            <p class="my-1">
+              {post.text}
+            </p>
+             <p class="post-date">
+                Posted on <Moment format='DD/MM/YYYY'>{post.date}</Moment>
+            </p>
+            </div>
+            </div>
+    </Fragment>
+    
+    )
 };
 
 Post.propTypes = {

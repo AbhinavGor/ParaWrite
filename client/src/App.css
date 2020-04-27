@@ -514,6 +514,7 @@ button {
   grid-template-columns: 1fr 4fr;
   grid-gap: 2rem;
   align-items: center;
+  height: fit-content;
 }
 
 .post > div:first-child {
@@ -539,6 +540,14 @@ button {
 }
 
 /* Mobile Styles */
+@media (max-width: 880px){
+  .my-1{
+    width: 80vw;
+  }
+  .post{
+    width: 90vw;
+  }
+}
 @media (max-width: 700px) {
 
   .footer{
