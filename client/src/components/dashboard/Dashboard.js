@@ -52,9 +52,9 @@ const Dashboard = ({getCurrentProfile, auth:{user}, profile:{profile, loading}})
                         <li>The submission should cover relevant historical, economic, social and/or political implications and possible consequences.</li>
                         <li>Solution presented has to be thoroughly explained, well argued and justified.</li>
                     </ol><br />
-                    <Link to={`/posts`} class='btn btn-primary'>
+                    {/* <Link to={`/posts`} class='btn btn-primary'>
                 Upload Here
-            </Link>
+            </Link> */}
                 </div>
             </div>
             <br /><br /><br />

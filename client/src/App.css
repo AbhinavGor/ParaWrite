@@ -1065,3 +1065,8 @@ button {
     font-size: 12px;
   }
 }
+
+.danger{
+  color: red;
+  font-weight: 900;
+}

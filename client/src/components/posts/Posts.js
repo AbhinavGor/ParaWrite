@@ -20,8 +20,7 @@ const Posts = ({ getPosts, auth,  user, post: {posts, loading, _id, text, name, 
                 <i className='fas fa-user'></i> Welcome to ParaWrite
             </p>
             <div className='bg-primary p'>
-                <h3>Submit your articles here</h3>
-                <small>Articles can be submitted from 27th April to 3rd May.</small><br />
+                <h3 className='danger'>Submissions closed</h3>
                 <small>Results will be announced on 7th May.</small>
             </div>
             <PostForm />

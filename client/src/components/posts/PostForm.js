@@ -8,7 +8,7 @@ const PostForm = ({ addPost }) => {
 
   return (
     <div className='post-form'>
-      <form
+      {/* <form
         className='form my-1'
         onSubmit={e => {
           e.preventDefault();
@@ -27,7 +27,7 @@ const PostForm = ({ addPost }) => {
         />
         <br />
         <input type='submit' className='login' value='Submit' />
-      </form>
+      </form> */}
     </div>
   );
 };

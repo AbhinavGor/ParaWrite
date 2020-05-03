@@ -45,10 +45,10 @@ const PostItem = ( {addLike, removeLike, deletePost, auth, post:  {_id, text, na
             <Link to={`/posts/${_id}`} class='btn btn-primary'>
                 View Post
             </Link>
-            {!auth.loading && user === auth.user._id &&(
+            {/* {!auth.loading && user === auth.user._id &&(
                 <button onClick = { e => deletePost(_id)} type="button" class="btn btn-danger">
                       <i class="fas fa-times"></i>
-                </button>)}
+                </button>)} */}
                   </Fragment>
                     
                   
