@@ -1066,11 +1066,28 @@ button {
   }
 }
 
-.danger{
-  color: red;
+.dangeralert{
   font-weight: 900;
+  background: var(--danger-color);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+}
+.successalert{
+  color: white;
+  font-weight: 900;
+  background: var(--success-color);
+  padding: 2px 8px 2px 8px;
+  text-align: center;
+  border-radius: 10px;
+  width: fit-content;
 }
 
+.danger{
+    color: red;
+    font-weight: 900;
+}
 .success{
   color: green;
   font-weight: 900;

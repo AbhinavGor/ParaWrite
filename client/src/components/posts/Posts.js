@@ -16,12 +16,11 @@ const Posts = ({ getPosts, auth,  user, post: {posts, loading, _id, text, name, 
         <Fragment>
             <h1 className='large text-primary'>Posts</h1>
             <p className='lead'>
-                {auth.user.member &&(<div><h1><i className='fas fa-user-lock'></i> Welcome to ParaWrite</h1><h3 className='success'>Admin Access</h3></div>)}
-                {!auth.user.member &&(<div><i className='fas fa-user'></i> Welcome to ParaWrite</div>)}
+                {auth.user.member &&(<div><h1><i className='fas fa-user-lock'></i> Welcome to ParaWrite</h1><h4 className='successalert'>Admin Access</h4></div>)}
+                {!auth.user.member &&(<div><i className='fas fa-user'></i> Welcome to ParaWrite<div className='bg-primary p'><small>Results will be announced on 7th May.</small> </div></div>)}
             </p>
-            <div className='bg-primary p'>
-                <h3 className='danger'>Submissions closed</h3>
-                <small>Results will be announced on 7th May.</small>
+            <div className='primary-bg p'>
+            <h3 className='dangeralert'>Submissions closed</h3>
             </div>
             <PostForm />
             {auth.user.hasposted &&(
