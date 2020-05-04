@@ -5,7 +5,6 @@ import { getPosts } from '../../actions/post';
 import Spinner from '../layout/Spinner';
 import PostItem from './PostItem';
 import PostForm from './PostForm';
-import Pagination from 'react-js-pagination';
 
 
 const Posts = ({ getPosts, auth,  user, post: {posts, loading, _id, text, name, avatar, likes, date}}) => {
@@ -17,7 +16,8 @@ const Posts = ({ getPosts, auth,  user, post: {posts, loading, _id, text, name, 
         <Fragment>
             <h1 className='large text-primary'>Posts</h1>
             <p className='lead'>
-                <i className='fas fa-user'></i> Welcome to ParaWrite
+                {auth.user.member &&(<div><h1><i className='fas fa-user-lock'></i> Welcome to ParaWrite</h1><h3 className='success'>Admin Access</h3></div>)}
+                {!auth.user.member &&(<div><i className='fas fa-user'></i> Welcome to ParaWrite</div>)}
             </p>
             <div className='bg-primary p'>
                 <h3 className='danger'>Submissions closed</h3>
